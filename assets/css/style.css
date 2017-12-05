@@ -1,3 +1,20 @@
 * {
 	box-sizing: border-box;
 }
+
+#buttons {
+	padding-bottom: 10px;
+}
+
+.band-name {
+	background-color: #0099cc;
+}
+
+#gifs-appear-here {
+	
+}
+
+#form {
+	float: right;
+	padding-right: 60px;
+}
