@@ -17,6 +17,9 @@ $("#input").on("submit", function() {
   $(topics).add(band);
   
   $("button").on("click", function() {
+
+    $("#gifs-appear-here").empty();
+    
       var bandImg = $(this).text();
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         bandImg + "&api_key=dc6zaTOxFJmzC&limit=10";
