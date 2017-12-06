@@ -10,11 +10,12 @@ $("#input").on("submit", function() {
   event.preventDefault();
 
   var band = $("#band").val();
-  $(topics).text(band);
+  topics.push(band);
 
-  $("#buttons").append("<button class='band-name'>" + band + "</button>");
+  $("#buttons").append("<button class='band-name'>" + topics.splice(-1) + "</button>");
+
   $(topics).add(band);
-  console.log(topics);
+
   $(".band-name").attr("id", band);
   
   $("button").on("click", function() {
