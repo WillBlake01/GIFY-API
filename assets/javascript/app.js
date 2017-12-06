@@ -1,10 +1,20 @@
+$(document).ready(function () {
 
+var topics = ["Metallica", "Nirvana", "The Story So Far", "Oasis", "Bloc Party"];
+
+for (var i = 0; i < topics.length; i++) {
+  $("#buttons").append("<button class='band-name'>" + topics[i] + "</button>");
+}
 
 $("#input").on("submit", function() {
   event.preventDefault();
 
   var band = $("#band").val();
+  $(topics).text(band);
+
   $("#buttons").append("<button class='band-name'>" + band + "</button>");
+  $(topics).add(band);
+  console.log(topics);
   $(".band-name").attr("id", band);
   
   $("button").on("click", function() {
@@ -39,3 +49,4 @@ $("#input").on("submit", function() {
       });
 
     });
+});
