@@ -15,13 +15,11 @@ $("#input").on("submit", function() {
   $("#buttons").append("<button class='band-name'>" + topics.splice(-1) + "</button>");
 
   $(topics).add(band);
-
-  $(".band-name").attr("id", band);
   
   $("button").on("click", function() {
-      var bandImg = $(band);
+      var bandImg = $(this).text();
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        band + "&api_key=dc6zaTOxFJmzC&limit=10";
+        bandImg + "&api_key=dc6zaTOxFJmzC&limit=10";
 
       $.ajax({
           url: queryURL,
