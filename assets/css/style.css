@@ -18,6 +18,7 @@
 #gifs-appear-here {
 	column-count: 3;
 	width: 800px;
+	padding-top: 40px;
 }
 
 #form {
